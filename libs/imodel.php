@@ -6,7 +6,7 @@ interface IModel{
     public function insert();
     public function update();
     public function delete($id);
-    public function from(array $array);
+    public function set(array $array);
 }
 
 ?>

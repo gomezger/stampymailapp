@@ -12,4 +12,7 @@ class View
         $this->d = $data;
         require 'views/' . $nombre . '.php';
     }
+
+
+    
 }

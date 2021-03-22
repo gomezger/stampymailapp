@@ -7,7 +7,7 @@ ini_set('log_errors', TRUE); // Error/Exception file logging engine.
 ini_set("error_log", "X:\www\stampymailapp\php-error.log"); */
 
 
-require_once 'libs/database.php';
+/* require_once 'libs/database.php';
 require_once 'helpers/encryption.php';
 require_once 'libs/controller.php';
 require_once 'libs/view.php';
@@ -18,3 +18,8 @@ require_once 'config/config.php';
 
 
 $app = new App(); 
+ */
+
+ echo 'hola';
+
+ ?>

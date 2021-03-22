@@ -7,11 +7,13 @@ class app
     function __construct()
     {
 
-        echo 'hi';
-        /* // obtener datos de la url
+        // obtener datos de la url
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
+
+        var_dump($url);
+        exit;
 
         // si no hay ruta: abro url main
         if (empty($url[0])) {

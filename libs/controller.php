@@ -9,7 +9,7 @@ abstract class Controller
         $this->view = new View();
     }
 
-    function loadModel(string $model): Model {
+    function loadModel(string $model) {
         $url = 'models/' . $model . '-model.php';
 
         if(file_exists($url)){
@@ -20,26 +20,6 @@ abstract class Controller
 
         return null;
     }
-    
-    function existPOST(array $params): bool{
-        foreach ($params as $param) {
-            if(!isset($_POST[$param])){
-                error_log("ExistPOST: No existe el parametro $param" );
-                return false;
-            }
-        }
-        error_log( "ExistPOST: Existen parámetros" );
-        return true;
-    }
-
-    function existGET(array $params): bool{
-        foreach ($params as $param) {
-            if(!isset($_GET[$param])){
-                return false;
-            }
-        }
-        return true;
-    }
 
     function getGet(string $name): string{
         return $_GET[$name];
@@ -47,6 +27,10 @@ abstract class Controller
 
     function getPost(string $name): string{
         return $_POST[$name];
+    }
+
+    function allPost(): array {
+        return $_POST;
     }
 
     function redirect(string $url, array $mensajes = []): void{

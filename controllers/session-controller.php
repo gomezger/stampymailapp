@@ -29,7 +29,6 @@ class SessionController extends Controller
 
     public function validateSession()
     {
-        error_log('SESSIONCONTROLLER::validateSession');
 
         if ($this->existsSession()) {
 
@@ -56,7 +55,6 @@ class SessionController extends Controller
         $id = $this->userid;
         $this->user = new UserModel();
         $this->user->find($id);
-        error_log('SESSIONCONTROLLER::getUSerSessionData ->' . $this->user->getUsername());
         return $this->user;
     }
 
@@ -78,12 +76,11 @@ class SessionController extends Controller
     public function getCurrentPage(): string {
         $current = trim($_SERVER['REQUEST_URI']);
         $url = explode('/', $current);
-        error_log('SESSIONCONTROLLER::getCurrentPage ->' . $url[2]);
         return $url[2];
     }
 
     private function redirectDefaultSite(): void {
-        header('location:' . $this->defaultSites['unauthorized']);
+        header('location:' . constant('URL') . $this->defaultSites['unauthorized']);
     }
 
     public function initialize($user) {
@@ -92,11 +89,12 @@ class SessionController extends Controller
     }
 
     public function authorizeAccess() {
-        header('location:' . $this->defaultSites['authorized']);        
+        header('location:' . constant('URL') . $this->defaultSites['authorized']);        
     }
 
     public function logout() {
-        $this->session->closeSession()();
+        $this->session->closeSession();
+        $this->redirectDefaultSite();
     }
 
 }

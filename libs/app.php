@@ -18,11 +18,11 @@ class app
 
             $fileController = 'controllers/login-controller.php';
             require_once $fileController;
+            
+            $controller = new LoginController();
             var_dump($url);
             exit;}
-            /*
-            $controller = new LoginController();
-            $controller->default();
+           /* $controller->default();
             return;
         }
 

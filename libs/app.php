@@ -20,13 +20,10 @@ class app
             require_once $fileController;
             
             $controller = new LoginController();
-            var_dump($url);
-            exit;}
-           /* $controller->default();
+           $controller->default();
             return;
         }
 
-        /*
         // hay controlador
         $fileController = 'controllers/' . $url[0] . '-controller.php';
 
@@ -68,6 +65,6 @@ class app
         }
 
         $controller = new ErrorsController();
-        $controller->error404(); */
+        $controller->error404(); 
     }
 }

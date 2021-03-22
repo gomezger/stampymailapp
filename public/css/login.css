@@ -64,6 +64,7 @@
     justify-content: center;
     background: #f5f6f8;
     cursor: pointer;
+    margin: 0;
   }
   
   .lf--input {

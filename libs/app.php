@@ -15,7 +15,7 @@ class app
         var_dump($url);
         exit;
 
-        // si no hay ruta: abro url main
+        /*// si no hay ruta: abro url main
         if (empty($url[0])) {
 
             $fileController = 'controllers/login-controller.php';

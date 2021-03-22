@@ -1,0 +1,20 @@
+{
+    "sites": [
+        {
+            "site": "",
+            "access": "public"
+        },
+        {
+            "site": "login",
+            "access": "public"
+        },
+        {
+            "site": "users",
+            "access": "private"
+        }
+    ],
+    "default-sites":  {
+        "authorized" : "users",
+        "unauthorized" : "login"
+    }
+}

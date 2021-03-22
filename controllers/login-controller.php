@@ -1,6 +1,8 @@
 <?php
 
-class LoginController extends Controller
+include_once 'session-controller.php';
+
+class LoginController extends SessionController
 {
 
     function __construct()

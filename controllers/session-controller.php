@@ -76,7 +76,7 @@ class SessionController extends Controller
     public function getCurrentPage(): string {
         $current = trim($_SERVER['REQUEST_URI']);
         $url = explode('/', $current);
-        return $url[2];
+        return (is_null($url[2])) ? '' : $url[2];
     }
 
     private function redirectDefaultSite(): void {

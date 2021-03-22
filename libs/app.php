@@ -6,7 +6,9 @@ class app
 
     function __construct()
     {
-        // obtener datos de la url
+
+        echo 'hi';
+        /* // obtener datos de la url
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
@@ -62,6 +64,6 @@ class app
         }
 
         $controller = new ErrorsController();
-        $controller->error404();
+        $controller->error404(); */
     }
 }

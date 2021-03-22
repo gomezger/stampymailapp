@@ -12,10 +12,8 @@ class app
         $url = rtrim($url, '/');
         $url = explode('/', $url);
 
-        var_dump($url);
-        exit;
 
-        /*// si no hay ruta: abro url main
+        // si no hay ruta: abro url main
         if (empty($url[0])) {
 
             $fileController = 'controllers/login-controller.php';
@@ -25,6 +23,9 @@ class app
             return;
         }
 
+        var_dump($url);
+        exit;
+        /*
         // hay controlador
         $fileController = 'controllers/' . $url[0] . '-controller.php';
 

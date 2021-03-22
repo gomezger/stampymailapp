@@ -76,6 +76,8 @@ class SessionController extends Controller
     public function getCurrentPage(): string {
         $current = trim($_SERVER['REQUEST_URI']);
         $url = explode('/', $current);
+        var_dump($url);
+        exit;
         return $url[2];
     }
 

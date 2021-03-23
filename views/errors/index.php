@@ -133,4 +133,4 @@
 </svg>
 
 
-<a href="<?php echo constant('URL'); ?>" class="btn btn-info ml-1 mt-1">Volver al inicio</a>
+<a href="<?php echo constant('URL'); ?>/users" class="btn btn-info ml-1 mt-1">Volver al inicio</a>

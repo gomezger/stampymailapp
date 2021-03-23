@@ -16,11 +16,6 @@
         echo '<link rel="stylesheet" href="' . constant('URL') . 'public/css/' . $style . '">';
     }
     ?>
-    <?php
-    foreach ($jsFiles as $file) {
-        echo '<script src="' . constant('URL') . 'public/js/' . $file . '">';
-    }
-    ?>
 </head>
 
 <body>

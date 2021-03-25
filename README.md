@@ -21,4 +21,5 @@
   <li>Obligar al usuario a poner contraseñas más seguras</li>
   <li>Sistema de rutas que no obligue a poner contralador seguido de función en la url</li>
   <li>Mejorar las vistas de users</li>
+  <li>Crear un front-end y back-end</li>
 </ul>
